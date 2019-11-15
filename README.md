@@ -23,5 +23,6 @@ $ docker build --rm -t local/c7-systemd-httpd --file dockerfile.runner .
 
 ## Run the Runner Image
 ```bash
-$ docker run -ti --privileged=true -v /sys/fs/cgroup:/sys/fs/cgroup:ro -p 8880:80 local/c7-systemd-httpd
+$ docker run -ti --privileged=true -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
+  -p 8880:80 local/c7-systemd-httpd
 ```
